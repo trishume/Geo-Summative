@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>places.kml</name>
+	<open>1</open>
+	<LookAt>
+		<longitude>-79.07917305103259</longitude>
+		<latitude>43.1</latitude>
+		<altitude>0</altitude>
+		<heading>-98.0945965849577</heading>
+		<tilt>45.94203553169334</tilt>
+		<range>20000</range>
+		<altitudeMode>relativeToGround</altitudeMode>
+		<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+	</LookAt>
+	<StyleMap id="msn_lodging">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_lodging</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_lodging</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_swimming">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_swimming</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_swimming</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="restaurant">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_restaurant</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_restaurant</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_swimming">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/swimming.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_swimming">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/swimming.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_museum-15">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://mw1.google.com/mw-earth-vectordb/smartmaps_icons/museum-15.png</href>
+			</Icon>
+		</IconStyle>
+		<BalloonStyle>
+			<text>$[description]</text>
+		</BalloonStyle>
+	</Style>
+	<Style id="sh_restaurant">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.gstatic.com/intl/en_ALL/mapfiles/ms/micons/restaurant.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_museum-15">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_museum-15</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_museum-15</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_restaurant">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.gstatic.com/intl/en_ALL/mapfiles/ms/micons/restaurant.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_museum-15">
+		<IconStyle>
+			<Icon>
+				<href>http://mw1.google.com/mw-earth-vectordb/smartmaps_icons/museum-15.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_lodging">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_lodging">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Folder>
+		<name>Niagara Geo Summative</name>
+		<open>1</open>
+		<LookAt>
+			<longitude>-79.06722729090843</longitude>
+			<latitude>43.09967851171525</latitude>
+			<altitude>0</altitude>
+			<heading>-154.3067567004817</heading>
+			<tilt>46.94253016947593</tilt>
+			<range>4914.358861504394</range>
+			<altitudeMode>relativeToGround</altitudeMode>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<Placemark>
+			<name>Skylon Tower</name>
+			<description><![CDATA[A viewing tower next to the falls.
+<br/>
+It includes two restaurants:
+<ul>
+<li><b>The Revolving Dining Room</b> - A high end revolving restaurant with meals priced $40-$50</li>
+<li><b>The Summit Suite Buffet</b> - A slightly lower priced buffet restaurant. Dinner is $35</li>
+</ul>
+
+I plan to eat dinner at the buffet on day 2.]]></description>
+			<LookAt>
+				<longitude>-79.08029006740109</longitude>
+				<latitude>43.08775931132296</latitude>
+				<altitude>0</altitude>
+				<heading>-0.001718650064929196</heading>
+				<tilt>0</tilt>
+				<range>1342.763791967048</range>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-79.07950150069814,43.08561039869554,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Whirlpool Aerocar</name>
+			<description>A cable car ride over the Niagara Whirlpool. 
+
+Admission costs $12.</description>
+			<LookAt>
+				<longitude>-79.06813592470213</longitude>
+				<latitude>43.11782767237569</latitude>
+				<altitude>0</altitude>
+				<heading>-0.01118019056516687</heading>
+				<tilt>0</tilt>
+				<range>295.6152811108471</range>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin0</styleUrl>
+			<Point>
+				<coordinates>-79.0685231799648,43.11773242332251,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Ripley&apos;s Moving Theatre</name>
+			<description>Part of the Ripley&apos;s package. A 3D movie theatre.</description>
+			<LookAt>
+				<longitude>-79.07420301953633</longitude>
+				<latitude>43.09154438287355</latitude>
+				<altitude>0</altitude>
+				<heading>0.00243960146390542</heading>
+				<tilt>0</tilt>
+				<range>302.5272346170738</range>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin0</styleUrl>
+			<Point>
+				<coordinates>-79.07571523417562,43.09188445135857,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Louis Tussaud&apos;s Waxworks</name>
+			<description>Part of the Ripley&apos;s package. A wax museum.</description>
+			<LookAt>
+				<longitude>-79.07527019069965</longitude>
+				<latitude>43.09153812705851</latitude>
+				<altitude>0</altitude>
+				<heading>0.001710540772587524</heading>
+				<tilt>0</tilt>
+				<range>300.4008206249654</range>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin0</styleUrl>
+			<Point>
+				<coordinates>-79.07481318791466,43.0915762571106,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Days Inn &amp; Suites By The Falls</name>
+			<description><![CDATA[The hotel I will be staying in.<br/>
+
+<b>Includes:</b>
+<ul>
+<li>Continental breakfast</li>
+<li>Pool</li>
+<li>Hot tub</li>
+<li>Internet</li>
+</ul>
+<br/>
+It costs $87 per night.]]></description>
+			<LookAt>
+				<longitude>-79.0755066224115</longitude>
+				<latitude>43.09219158122867</latitude>
+				<altitude>0</altitude>
+				<heading>0.001548924565160963</heading>
+				<tilt>0</tilt>
+				<range>976.6213299880046</range>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_lodging</styleUrl>
+			<Point>
+				<coordinates>-79.07842671628416,43.0932629068054,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Ripley&apos;s Believe It Or Not Museum</name>
+			<description>Ripley&apos;s museum. A museum of odd and interesting things.
+
+The admission comes in a package with the theatre and waxworks for $24. 
+
+These 3 things will be my main activites for day 4.</description>
+			<LookAt>
+				<longitude>-79.07545605551648</longitude>
+				<latitude>43.09178553784754</latitude>
+				<altitude>0</altitude>
+				<heading>117.4071833844353</heading>
+				<tilt>44.99937607082453</tilt>
+				<range>146.8647502028132</range>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin0</styleUrl>
+			<Point>
+				<coordinates>-79.07545605551648,43.09178553784754,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Nightmares Fear Factory</name>
+			<description>A haunted house that, according to reviews, is actually scary.
+
+Admission costs $12.</description>
+			<LookAt>
+				<longitude>-79.07391783305381</longitude>
+				<latitude>43.092909485271</latitude>
+				<altitude>0</altitude>
+				<heading>126.429617586389</heading>
+				<tilt>44.77078165481745</tilt>
+				<range>259.6438973107987</range>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin0</styleUrl>
+			<Point>
+				<coordinates>-79.07400587657411,43.09348085606159,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Fallsview Water Park</name>
+			<description>Huge indoor water park and wave pool. Main activity for day 3.
+
+Admission costs $45.</description>
+			<LookAt>
+				<longitude>-79.07186744823991</longitude>
+				<latitude>43.09254454593444</latitude>
+				<altitude>0</altitude>
+				<heading>0.004035174679429789</heading>
+				<tilt>0</tilt>
+				<range>986.9335530044617</range>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_swimming</styleUrl>
+			<Point>
+				<coordinates>-79.07135780687449,43.09212062596105,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Maid of the Mist</name>
+			<description>A boat ride in the pool at the bottom of the falls. 
+
+Admission costs $17.</description>
+			<LookAt>
+				<longitude>-79.07359781985807</longitude>
+				<latitude>43.08953694434796</latitude>
+				<altitude>0</altitude>
+				<heading>0.002853183856473551</heading>
+				<tilt>0</tilt>
+				<range>998.2128673420048</range>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin0</styleUrl>
+			<Point>
+				<coordinates>-79.07218483590381,43.0894631781033,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Napoli Ristorante Pizzeria</name>
+			<description><![CDATA[<div dir="ltr">I plan to eat dinner here on day 1.</div>]]></description>
+			<styleUrl>#restaurant</styleUrl>
+			<Point>
+				<coordinates>-79.084999,43.089645,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Secret Garden Restaurant</name>
+			<description><![CDATA[<div dir="ltr">I plan to eat lunch here on day 2.</div>]]></description>
+			<styleUrl>#restaurant</styleUrl>
+			<Point>
+				<coordinates>-79.07204400000001,43.089699,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Dufferin Islands</name>
+			<description><![CDATA[<div dir="ltr">A nice park made up of many small islands linked with bridges.<br><br>I plan on going here on day 2.<br></div>]]></description>
+			<styleUrl>#msn_ylw-pushpin0</styleUrl>
+			<Point>
+				<coordinates>-79.070694,43.068665,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Perkins Restaurant &amp; Bakery</name>
+			<description><![CDATA[<div dir="ltr">I plan to eat lunch here on day 3.</div>]]></description>
+			<styleUrl>#restaurant</styleUrl>
+			<Point>
+				<coordinates>-79.07205999999999,43.094082,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Oh Canada Eh Dinner Show</name>
+			<description><![CDATA[<div dir="ltr">I plan to eat dinner here on day 3.<br>The restaurant is also a theatre where you can watch a musical about Canada's history while you eat.</div>]]></description>
+			<styleUrl>#restaurant</styleUrl>
+			<Point>
+				<coordinates>-79.144226,43.088753,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Subway</name>
+			<description><![CDATA[<div dir="ltr">I plan to eat lunch here on day 4.</div>]]></description>
+			<styleUrl>#restaurant</styleUrl>
+			<Point>
+				<coordinates>-79.07688899999999,43.091709,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Casa Vostra Niagara Falls</name>
+			<description><![CDATA[<div dir="ltr">I plan to eat dinner here on day 4.</div>]]></description>
+			<styleUrl>#restaurant</styleUrl>
+			<Point>
+				<coordinates>-79.08165,43.088779,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Queen Victoria Park</name>
+			<description><![CDATA[<div dir="ltr">A nice park with a falls viewing area.</div>]]></description>
+			<styleUrl>#msn_ylw-pushpin0</styleUrl>
+			<Point>
+				<coordinates>-79.076508,43.087063,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Table Rock Complex</name>
+			<description><![CDATA[<div dir="ltr">The main welcome centre of Niagara Parks.<br><br>This is where I will go on the Journey Under the Falls.<br><br>I will also eat lunch here on day 5.</div>]]></description>
+			<styleUrl>#msn_ylw-pushpin0</styleUrl>
+			<Point>
+				<coordinates>-79.078857,43.079327,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <title>Falling For Niagara</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <!-- API Key for code.google.com -->
+  <script type="text/javascript" src="http://www.google.com/jsapi?hl=en&key=ABQIAAAAzWskNx89vQOqUzmu32wmqhR16YBzROR0r3YZmGJP7J60uDzb2xRqyPM5IQ-9Yd3nCyF0Z3BLkis9cg"></script>
+  <LINK href="index.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="lib/geplugin-helpers.js"></script>
+  <script type="text/javascript" src="lib/math3d.js"></script>
+  <script type="text/javascript" src="simulator.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+
+var DS_ge;
+var DS_geHelpers;
+var DS_map;
+
+google.load("jquery", "1");
+google.load("maps", "2.x");
+google.load("earth", "1");
+
+function DS_init() {
+  $('#directions-form input').attr('disabled', 'disabled');
+  $('#simulator-form input').attr('disabled', 'disabled');
+  
+  google.earth.createInstance(
+    'earth',
+    function(ge) {
+      DS_ge = ge;
+      DS_ge.getWindow().setVisibility(true);
+      DS_ge.getLayerRoot().enableLayerById(DS_ge.LAYER_BUILDINGS, true);
+      DS_ge.getLayerRoot().enableLayerById(DS_ge.LAYER_BORDERS, true);
+      DS_geHelpers = new GEHelpers(DS_ge);
+      
+      DS_ge.getNavigationControl().setVisibility(ge.VISIBILITY_AUTO);
+      
+      DS_map = new GMap2($('#map').get(0));
+      DS_map.setCenter(new GLatLng(37.4419, -122.1419), 13);
+      DS_map.addControl(new GSmallMapControl());
+      DS_map.enableContinuousZoom();
+      
+      $('#directions-form input').removeAttr('disabled');
+
+			
+    },
+    function() {
+    });
+
+  function onresize() {
+    var clientHeight = document.documentElement.clientHeight;
+
+    $('#route-details, #earth, #map').each(function() {
+      $(this).css({
+        height: (clientHeight - $(this).position().top - 100).toString() + 'px' });      
+    });
+  }
+  
+  $(window).resize(onresize);
+  onresize();
+  setTimeout(DS_goDirections,2000);
+  loadBottomText("drive");
+  //setTimeout(ShowNiagaraKml,2000);
+}
+
+google.setOnLoadCallback(DS_init);
+
+// ]]>
+</script>
+</head>
+<body onunload="GUnload();">
+<!--<h1>Falling for Niagara</h1>-->
+<div id="container">
+	<div class="subgroup">
+		<table style="width: 100%; height: 400px;">
+		<tr>
+		  <td style="width: 300px" valign="top" id="left-sidebar-drive">
+		    <table style="width: 300px">
+		      <tr>
+		        <td style="width: 50%" valign="top">
+		          <form id="simulator-form" onsubmit="return false;" action="get">
+		            <!--<fieldset id="controls-area">
+		              <legend>Controls</legend>
+		              <input type="button" onclick="DS_controlSimulator('reset');" value="Reset"/>
+		              <input type="button" onclick="DS_controlSimulator('start');" value="Start"/>
+		              <input type="button" onclick="DS_controlSimulator('pause');" value="Pause"/>
+		            </fieldset>-->
+					<fieldset id ="status-area">
+						<legend>Status</legend>
+						<div id="status">
+							<strong>Time:</strong><br/>
+							<strong>Distance:</strong><br/>
+							<strong>Speed Multiplier:</strong><br/>
+						</div>
+					</fieldset>
+		          </form>
+		        </td>
+		      </tr>
+		    </table>
+		    <div id="route-details"></div>
+		  </td>
+		  <td style="width: 67%" valign="top">
+		    <div id="earth" style="border: 1px solid #000; height: 500px;">
+		  </td>
+		  <td style="width: 33%" valign="top" id="right-sidebar-map">
+		    <div id="map" style="border: 1px solid #000; height: 500px;"></div>
+		  </td>
+		</tr>
+		</table>
+	</div>
+	<div class="spacer"></div>
+	<div class="subgroup">
+		<table>
+			<tr>
+				<td valign="top" style="width: 20%;height:100%;display:none;" id="indexcell">
+					<div id="pageindex">
+						<h2>Index</h2>
+						<ul>
+							<li><a href="javascript:loadBottomText('main');">Main Page</a></li>
+							<li><a href="javascript:loadBottomText('drive2');">Getting There</a></li>
+							<li><a href="javascript:loadBottomText('food');">Food & Lodging</a></li>
+							<li><a href="javascript:loadBottomText('climate');">Climate</a></li>
+							<li><a href="javascript:loadBottomText('activities');">Activities</a></li>
+							<li><a href="javascript:loadBottomText('itinerary');">Itinerary & Budget</a></li>
+							<li><a href="javascript:loadBottomText('postcard');">Post Card</a></li>
+							<li><a href="javascript:loadBottomText('bibliography');">Bibliography</a></li>
+						</ul>
+					</div>
+				</td>
+				<td valign="top" style="width: 80%;height:100%;"><div id="pagetext"></div></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <title>Falling For Niagara</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <LINK href="index.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="lowtech.js"></script>
+  <script type="text/javascript" src="http://www.google.com/jsapi?hl=en&key=ABQIAAAAzWskNx89vQOqUzmu32wmqhR16YBzROR0r3YZmGJP7J60uDzb2xRqyPM5IQ-9Yd3nCyF0Z3BLkis9cg"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=panoramio"></script>
+	<script type="text/javascript">
+	google.load("jquery", "1");
+	var map;
+	function addlegend(theMap) {
+		// Create a div to hold the control.
+		var controlDiv = document.createElement('DIV');
+		
+		// Set CSS styles for the DIV containing the control
+		// Setting padding to 5 px will offset the control
+		// from the edge of the map
+		controlDiv.style.padding = '0px';
+		controlDiv.innerHTML = "<img src='http://tristan.hume.ca/geosummative/legend4.png'/>";
+		
+		theMap.controls[google.maps.ControlPosition.TOP_LEFT].push(controlDiv);
+	}
+	function addcompass(theMap) {
+		// Create a div to hold the control.
+		var controlDiv = document.createElement('DIV');
+		
+		// Set CSS styles for the DIV containing the control
+		// Setting padding to 5 px will offset the control
+		// from the edge of the map
+		controlDiv.style.padding = '5px';
+		controlDiv.innerHTML = "<img src='http://tristan.hume.ca/geosummative/normal_ian-symbol-north-arrow-2.png' style='width:30px;'/>";
+		
+		theMap.controls[google.maps.ControlPosition.LEFT_TOP].push(controlDiv);
+	}
+	function initialize() {
+	  var niagara = new google.maps.LatLng(43.05226,-78.87501);
+	  var optzoom = 13;
+	  var myOptions = {
+	    zoom: optzoom,
+	    center: niagara,
+	    panControl: false,
+	    zoomControl: true,
+	    zoomControlOptions: {
+	        style: google.maps.ZoomControlStyle.LARGE,
+	        position: google.maps.ControlPosition.RIGHT_CENTER
+	    },
+    	scaleControl: true,
+	    mapTypeId: google.maps.MapTypeId.HYBRID
+	  }
+	
+	  map = new google.maps.Map(document.getElementById("map"), myOptions);
+	
+	  var ctaLayer = new google.maps.KmlLayer('http://tristan.hume.ca/geosummative/places.kml');
+	  ctaLayer.setMap(map);
+	  
+	  //var panoramioLayer = new google.maps.panoramio.PanoramioLayer();
+		//panoramioLayer.setMap(map);
+	  
+	  addlegend(map);
+	  addcompass(map);
+	  loadBottomText("main");
+	  map.setZoom(optzoom);
+	  google.maps.event.addListener(map, 'zoom_changed', function() {
+	  	//alert("hi")
+	  	if(map.getZoom() < optzoom) {
+	  		map.setZoom(optzoom);
+	  	}
+	  });
+
+	  
+	}
+	google.setOnLoadCallback(initialize);
+	</script>
+</head>
+<body>
+<div id="container">
+	<div class="subgroup">
+		<table style="width: 100%; height: 400px;">
+		<tr>
+		  <td style="width: 100%" valign="top" id="right-sidebar-map">
+		    <div id="map" style="border: 1px solid #000; height: 500px;"></div>
+		  </td>
+		</tr>
+		</table>
+	</div>
+	<div class="spacer"></div>
+	<div class="subgroup">
+		<table>
+			<tr>
+				<td valign="top" style="width: 20%;height:100%;" id="indexcell">
+					<div id="pageindex">
+						<h2>Index</h2>
+						<ul>
+							<li><a href="javascript:loadBottomText('main');">Main Page</a></li>
+							<li><a href="javascript:loadBottomText('drive2');">Getting There</a></li>
+							<li><a href="javascript:loadBottomText('food');">Food & Lodging</a></li>
+							<li><a href="javascript:loadBottomText('climate');">Climate</a></li>
+							<li><a href="javascript:loadBottomText('activities');">Activities</a></li>
+							<li><a href="javascript:loadBottomText('itinerary');">Itinerary & Budget</a></li>
+							<li><a href="javascript:loadBottomText('postcard');">Post Card</a></li>
+							<li><a href="javascript:loadBottomText('bibliography');">Bibliography</a></li>
+						</ul>
+					</div>
+				</td>
+				<td valign="top" style="width: 80%;height:100%;"><div id="pagetext"></div></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+</body>
+</html>
